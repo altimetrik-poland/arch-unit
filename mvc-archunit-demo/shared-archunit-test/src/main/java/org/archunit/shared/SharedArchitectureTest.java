@@ -16,6 +16,6 @@ public class SharedArchitectureTest {
         .should(CustomRules.notHaveFieldsAnnotatedWithDeprecated);
 
     @ArchTest
-    public static final ArchRule application_should_be_free_of_cycles = slices().matching("..(org).(*)..").should().beFreeOfCycles();
+    public static final ArchRule application_should_be_free_of_cycles = slices().matching("org.(*)..").should().beFreeOfCycles();
 
 }
