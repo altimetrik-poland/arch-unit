@@ -20,6 +20,7 @@ import java.util.List;
 import org.example.petclinic.model.BaseEntity;
 import org.example.petclinic.model.Pet;
 import org.example.petclinic.model.PetType;
+import org.example.petclinic.service.ClinicService;
 
 /**
  * Repository class for <code>Pet</code> domain objects All method names are compliant with Spring Data naming

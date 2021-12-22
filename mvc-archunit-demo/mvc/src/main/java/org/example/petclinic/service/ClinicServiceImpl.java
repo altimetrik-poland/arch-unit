@@ -15,10 +15,6 @@
  */
 package org.example.petclinic.service;
 
-import java.util.Collection;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.example.petclinic.model.Owner;
 import org.example.petclinic.model.Pet;
 import org.example.petclinic.model.PetType;
@@ -28,8 +24,12 @@ import org.example.petclinic.repository.OwnerRepository;
 import org.example.petclinic.repository.PetRepository;
 import org.example.petclinic.repository.VetRepository;
 import org.example.petclinic.repository.VisitRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Collection;
 
 /**
  * Mostly used as a facade for all Petclinic controllers
@@ -45,6 +45,8 @@ public class ClinicServiceImpl implements ClinicService {
     private OwnerRepository ownerRepository;
     private VisitRepository visitRepository;
 
+    //private VisitController visitController;
+
     @Autowired
     public ClinicServiceImpl(PetRepository petRepository, VetRepository vetRepository, OwnerRepository ownerRepository, VisitRepository visitRepository) {
         this.petRepository = petRepository;
@@ -56,6 +58,7 @@ public class ClinicServiceImpl implements ClinicService {
     @Override
     @Transactional(readOnly = true)
     public Collection<PetType> findPetTypes() {
+        System.out.println("inside showVisit");
         return petRepository.findPetTypes();
     }
 

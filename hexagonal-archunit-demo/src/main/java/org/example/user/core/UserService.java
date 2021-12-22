@@ -2,8 +2,10 @@ package org.example.user.core;
 
 import org.example.user.core.model.User;
 import org.example.user.core.ports.outgoing.UserRepository;
+import org.example.user.ext.ExternalResource;
 import org.springframework.stereotype.Component;
 
+import java.io.Externalizable;
 import java.util.UUID;
 
 
@@ -11,9 +13,6 @@ import java.util.UUID;
 //@Component
 public class UserService {
     private UserRepository repository;
-
-    //2 Domain must not know about technical infrastructures
-    // private UserFacade facade;
 
     //3 must not depend on external packages
     //private ExtResource extResource;

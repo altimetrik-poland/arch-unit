@@ -21,6 +21,7 @@ public class UserArchitectureTest {
             .adapter("rest", "org.example.user.infrastructure.rest..");
 
 
+
     @ArchTest
     public static final ArchRule domainRuleConstraints =
             classes()
@@ -30,7 +31,7 @@ public class UserArchitectureTest {
                     .onlyDependOnClassesThat()
                     .resideInAnyPackage("..core..", "java..");
 
-
+/*
     @ArchTest
     public static final ArchRule adaptersConstraints =
             classes()
@@ -38,6 +39,6 @@ public class UserArchitectureTest {
                     .resideInAPackage("..org.example.user.infrastructure..")
                     .should()
                     .bePackagePrivate();
-
+    */
 
 }

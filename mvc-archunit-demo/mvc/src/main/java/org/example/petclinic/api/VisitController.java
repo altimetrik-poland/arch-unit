@@ -21,6 +21,7 @@ import javax.validation.Valid;
 
 import org.example.petclinic.model.Pet;
 import org.example.petclinic.model.Visit;
+import org.example.petclinic.repository.VisitRepository;
 import org.example.petclinic.service.ClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,6 +40,7 @@ public class VisitController {
 
     private final ClinicService clinicService;
 
+    //private final VisitRepository visitRepository;
 
     @Autowired
     public VisitController(ClinicService clinicService) {
