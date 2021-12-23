@@ -6,19 +6,18 @@ import com.tngtech.archunit.lang.ArchRule;
 import org.archunit.shared.tests.CodingRulesTest;
 import org.archunit.shared.tests.CustomRules;
 import org.archunit.shared.tests.NamingRulesTest;
-import org.archunit.shared.tests.SpringBeanRulesTest;
 import org.archunit.shared.tests.SliceTest;
+import org.archunit.shared.tests.SpringBeanRulesTest;
 
-import static com.tngtech.archunit.core.domain.properties.CanBeAnnotated.Predicates.annotatedWith;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
 public class SharedArchitectureTest {
 
   @ArchTest
-  public static final ArchTests coding_rules = ArchTests.in(CodingRulesTest.class);
+  public static final ArchTests naming_rules = ArchTests.in(NamingRulesTest.class);
 
   @ArchTest
-  public static final ArchTests naming_rules = ArchTests.in(NamingRulesTest.class);
+  public static final ArchTests coding_rules = ArchTests.in(CodingRulesTest.class);
 
   @ArchTest
   public static final ArchTests sessionBean = ArchTests.in(SpringBeanRulesTest.class);

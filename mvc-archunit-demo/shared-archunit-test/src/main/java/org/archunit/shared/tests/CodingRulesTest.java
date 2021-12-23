@@ -26,6 +26,12 @@ public class CodingRulesTest {
   private final ArchRule no_java_util_logging = NO_CLASSES_SHOULD_USE_JAVA_UTIL_LOGGING;
 
   @ArchTest
+  private final ArchRule no_jodatime = NO_CLASSES_SHOULD_USE_JODATIME;
+
+  @ArchTest
+  private final ArchRule no_field_injection = NO_CLASSES_SHOULD_USE_FIELD_INJECTION;
+
+  @ArchTest
   private final ArchRule loggers_should_be_private_static_final =
       fields().that().haveRawType(Logger.class)
           .should().bePrivate()
@@ -42,9 +48,4 @@ public class CodingRulesTest {
           .notBePublic()
           .because("we agreed on this convention");
 
-  @ArchTest
-  private final ArchRule no_jodatime = NO_CLASSES_SHOULD_USE_JODATIME;
-
-  @ArchTest
-  private final ArchRule no_field_injection = NO_CLASSES_SHOULD_USE_FIELD_INJECTION;
 }

@@ -13,6 +13,4 @@ public class SliceTest {
             .matching("..petclinic.(*)..")
             .should()
             .beFreeOfCycles();
-
-
 }

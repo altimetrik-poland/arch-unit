@@ -8,7 +8,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 public class NamingRulesTest {
 
   @ArchTest
-  static ArchRule classes_named_controller_should_be_in_a_controller_package =
+  static ArchRule classes_named_controller_should_be_in_a_api_package =
       classes()
           .that()
           .haveSimpleNameContaining("Controller")
@@ -31,6 +31,5 @@ public class NamingRulesTest {
           .should()
           .haveSimpleNameNotContaining("Interface")
           .because("Interface is already defined in class scope");
-
 
 }
