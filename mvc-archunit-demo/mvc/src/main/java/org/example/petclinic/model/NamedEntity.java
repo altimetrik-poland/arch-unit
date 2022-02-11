@@ -15,6 +15,8 @@
  */
 package org.example.petclinic.model;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
@@ -28,6 +30,8 @@ import javax.persistence.MappedSuperclass;
  */
 @MappedSuperclass
 public class NamedEntity extends BaseEntity {
+
+    //private ClinicService clinicService;
 
     @Column(name = "name")
     private String name;
