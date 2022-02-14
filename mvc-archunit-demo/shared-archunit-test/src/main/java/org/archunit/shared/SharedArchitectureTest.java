@@ -29,6 +29,4 @@ public class SharedArchitectureTest {
   @ArchTest
   public static final ArchTests slices_rule = ArchTests.in(SliceTest.class);
 
-
-
 }

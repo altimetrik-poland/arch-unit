@@ -40,7 +40,7 @@ public class CodingRulesTest {
           .because("we agreed on this convention");
 
   @ArchTest
-  private final ArchRule fields_should_be_private =
+  private final ArchRule fields_should_not_be_public =
       fields()
           .that()
           .areDeclaredInClassesThat(DescribedPredicate.not(JavaClass.Predicates.ENUMS))

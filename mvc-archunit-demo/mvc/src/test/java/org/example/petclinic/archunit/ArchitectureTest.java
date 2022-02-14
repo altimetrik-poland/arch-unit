@@ -19,5 +19,4 @@ public class ArchitectureTest {
             .whereLayer("Service").mayOnlyBeAccessedByLayers("Controller")
             .whereLayer("Persistence").mayOnlyBeAccessedByLayers("Service");
 
-    //.ignoreDependency(VisitController.class, VisitRepository.class);
 }

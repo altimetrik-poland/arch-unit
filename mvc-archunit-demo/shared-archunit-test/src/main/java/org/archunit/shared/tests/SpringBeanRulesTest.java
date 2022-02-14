@@ -23,7 +23,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 public class SpringBeanRulesTest {
 
   @ArchTest
-  public static final ArchRule classes_named_service_should_be_annotated_with_serrvice =
+  public static final ArchRule classes_named_service_should_be_annotated_with_service =
       classes()
           .that()
           .resideInAPackage("..service..")
