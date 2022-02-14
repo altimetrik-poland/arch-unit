@@ -1,5 +1,7 @@
 package org.archunit.shared;
 
+import com.tngtech.archunit.core.importer.ImportOption;
+import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchTests;
 import com.tngtech.archunit.lang.ArchRule;
@@ -11,6 +13,7 @@ import org.archunit.shared.tests.SpringBeanRulesTest;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
+@AnalyzeClasses(importOptions = {ImportOption.DoNotIncludeArchives.class, ImportOption.DoNotIncludeJars.class, ImportOption.DoNotIncludeTests.class})
 public class SharedArchitectureTest {
 
   @ArchTest

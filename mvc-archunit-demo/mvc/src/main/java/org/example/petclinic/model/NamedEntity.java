@@ -17,6 +17,8 @@ package org.example.petclinic.model;
 
 
 
+import org.example.petclinic.service.ClinicService;
+
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
