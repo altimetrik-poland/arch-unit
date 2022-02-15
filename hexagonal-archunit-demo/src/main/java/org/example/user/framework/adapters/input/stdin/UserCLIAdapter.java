@@ -6,19 +6,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-class UserCLIAdapter
-{
+class UserCLIAdapter {
     private UserInputPort userInputPort;
 
-    public void processRequest(Object requestParams){
+    public void processRequest(Object requestParams) {
         Map<String, String> params = stdinParams(requestParams);
         UserInputPort.UserDetails userDetails = new UserInputPort.UserDetails(params.get("email"), params.get("firstName"), params.get("lastName"));
         userInputPort.addNewUser(userDetails);
     }
 
-    private Map<String, String> stdinParams(Object requestParams){
+    private Map<String, String> stdinParams(Object requestParams) {
         Map<String, String> params = new HashMap();
-        if(requestParams instanceof Scanner){
+        if (requestParams instanceof Scanner) {
             Scanner scanner = (Scanner) requestParams;
             System.out.println("Please put the email:");
             String email = scanner.nextLine();
