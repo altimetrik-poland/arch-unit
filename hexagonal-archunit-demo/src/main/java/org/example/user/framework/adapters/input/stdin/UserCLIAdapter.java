@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-class UserCLIAdapter {
+public class UserCLIAdapter {
     private UserInputPort userInputPort;
 
     public void processRequest(Object requestParams) {

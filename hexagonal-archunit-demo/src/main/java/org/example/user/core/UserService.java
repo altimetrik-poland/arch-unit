@@ -7,13 +7,10 @@ import org.example.user.core.ports.outgoing.UserOutputPort;
 import java.util.UUID;
 
 
-//4 domain must be independent
-//@Component
 public class UserService {
     private UserOutputPort userOutputPort;
 
-    //3 must not depend on external packages
-    //private ExtResource extResource;
+    //private ExternalResource externalResource;
 
     public UUID addNewUser(UserInputPort.UserDetails userDetails) {
         User user = new User(
