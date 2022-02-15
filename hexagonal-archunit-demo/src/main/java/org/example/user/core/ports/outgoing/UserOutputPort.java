@@ -4,6 +4,6 @@ import org.example.user.core.model.User;
 
 import java.util.UUID;
 
-public interface UserRepository {
-    UUID save(User user);
+public interface UserOutputPort {
+    UUID persistUser(User user);
 }

@@ -1,4 +1,4 @@
-package org.example.user.application;
+package org.example.user.framework;
 
 import org.springframework.boot.SpringApplication;
 

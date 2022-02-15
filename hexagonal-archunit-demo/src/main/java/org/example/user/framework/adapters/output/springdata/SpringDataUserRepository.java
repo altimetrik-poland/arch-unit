@@ -1,4 +1,4 @@
-package org.example.user.infrastructure.persistence;
+package org.example.user.framework.adapters.output.springdata;
 
 import org.example.user.core.model.User;
 import org.springframework.data.repository.CrudRepository;

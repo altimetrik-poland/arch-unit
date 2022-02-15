@@ -1,7 +1,6 @@
-package org.example.user.infrastructure.rest;
+package org.example.user.framework.adapters.input.rest;
 
-import org.example.user.core.model.AddUserRequest;
-import org.example.user.core.ports.incoming.AddNewUser;
+import org.example.user.core.ports.incoming.UserInputPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,11 +12,11 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")
-class UserEndpoint {
-    private AddNewUser addNewUser;
+class UserRestAdapter {
+    private UserInputPort addNewUser;
 
     @PostMapping
-    public ResponseEntity<String> addNewUser(@RequestBody AddUserRequest addUserCommand) {
+    public ResponseEntity<String> addNewUser(@RequestBody UserInputPort.UserDetails addUserCommand) {
         UUID uuid = addNewUser.addNewUser(addUserCommand);
         return ResponseEntity.created(URI.create("/users/" + uuid.toString())).build();
     }

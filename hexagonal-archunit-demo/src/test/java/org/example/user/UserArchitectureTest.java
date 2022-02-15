@@ -17,8 +17,9 @@ public class UserArchitectureTest {
             .domainModels("org.example.user.core.model..")
             .domainServices("org.example.user.core..")
             .applicationServices("org.example.user.application..")
-            .adapter("persistence", "org.example.user.infrastructure.persistence..")
-            .adapter("rest", "org.example.user.infrastructure.rest..");
+            .adapter("springdata", "org.example.user.framework.adapters.output.springdata")
+            .adapter("rest", "org.example.user.framework.adapters.input.rest")
+            .adapter("stdin", "org.example.user.framework.adapters.input.stdin");
 
 
 
