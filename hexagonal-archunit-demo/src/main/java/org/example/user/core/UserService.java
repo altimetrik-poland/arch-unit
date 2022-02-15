@@ -6,11 +6,11 @@ import org.example.user.core.ports.outgoing.UserOutputPort;
 
 import java.util.UUID;
 
-
 public class UserService {
     private UserOutputPort userOutputPort;
 
     //private ExternalResource externalResource;
+
 
     public UUID addNewUser(UserInputPort.UserDetails userDetails) {
         User user = new User(

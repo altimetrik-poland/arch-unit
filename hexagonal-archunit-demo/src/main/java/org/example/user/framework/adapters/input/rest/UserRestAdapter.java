@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")
-class UserRestAdapter {
+public class UserRestAdapter {
     private UserInputPort addNewUser;
 
     @PostMapping

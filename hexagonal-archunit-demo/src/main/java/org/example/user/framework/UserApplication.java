@@ -1,8 +1,10 @@
 package org.example.user.framework;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class UserApplication {
+@SpringBootApplication
+class UserApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserApplication.class, args);
     }

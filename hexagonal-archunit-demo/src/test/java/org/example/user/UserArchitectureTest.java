@@ -19,11 +19,21 @@ public class UserArchitectureTest {
             .applicationServices("org.example.user.application..")
             .adapter("persistence", "org.example.user.framework.adapters.output.springdata")
             .adapter("rest", "org.example.user.framework.adapters.input.rest")
-            .adapter("stdin", "org.example.user.framework.adapters.input.stdin");
+            .adapter("cli", "org.example.user.framework.adapters.input.stdin");
+
+
+    /*
+    @ArchTest
+    public static final ArchRule adaptersShouldBePackagePrivate =
+            classes()
+                    .that()
+                    .resideInAPackage("..org.example.user.framework..")
+                    .should()
+                    .bePackagePrivate();
 
 
     @ArchTest
-    public static final ArchRule domainRuleConstraints =
+    public static final ArchRule domainShouldBeIndependent =
             classes()
                     .that()
                     .resideInAPackage("..core..")
@@ -31,14 +41,5 @@ public class UserArchitectureTest {
                     .onlyDependOnClassesThat()
                     .resideInAnyPackage("..core..", "java..");
 
-/*
-    @ArchTest
-    public static final ArchRule adaptersConstraints =
-            classes()
-                    .that()
-                    .resideInAPackage("..org.example.user.infrastructure..")
-                    .should()
-                    .bePackagePrivate();
-    */
-
+*/
 }
