@@ -26,7 +26,6 @@ public class UserArchitectureTest {
 
 
 
-
     /*
     @ArchTest
     public static final ArchRule adaptersShouldBePackagePrivate =
@@ -36,6 +35,7 @@ public class UserArchitectureTest {
                     .should()
                     .bePackagePrivate();
 
+    //  since no other component is allowed to depends on it we can conclude none of adaptes code needs to be public
 
     @ArchTest
     public static final ArchRule domainShouldBeIndependent =
@@ -44,7 +44,7 @@ public class UserArchitectureTest {
                     .resideInAPackage("..core..")
                     .should()
                     .onlyDependOnClassesThat()
-                    .resideInAnyPackage("..core..", "java..");
+                    .resideInAnyPackage("..core..");
 
 */
 }
