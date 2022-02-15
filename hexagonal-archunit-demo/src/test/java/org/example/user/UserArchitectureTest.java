@@ -12,6 +12,7 @@ import static com.tngtech.archunit.library.Architectures.onionArchitecture;
         importOptions = {ImportOption.DoNotIncludeJars.class, ImportOption.DoNotIncludeTests.class})
 public class UserArchitectureTest {
 
+
     @ArchTest
     public static final ArchRule hexagonalArchitectureConstraints = onionArchitecture()
             .domainModels("org.example.user.core.model..")
@@ -20,6 +21,10 @@ public class UserArchitectureTest {
             .adapter("persistence", "org.example.user.framework.adapters.output.springdata")
             .adapter("rest", "org.example.user.framework.adapters.input.rest")
             .adapter("cli", "org.example.user.framework.adapters.input.stdin");
+
+
+
+
 
 
     /*
